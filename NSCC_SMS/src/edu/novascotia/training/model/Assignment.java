@@ -1,6 +1,5 @@
 package edu.novascotia.training.model;
 
-import java.util.List;
 
 /** @author W0296430 */
 public abstract class Assignment

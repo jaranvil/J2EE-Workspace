@@ -9,7 +9,7 @@ package edu.novascotia.training.utitlty;
 public interface Configuration
 {
     /** Where configuration file exists. */
-    String CONFIGURATION_FILE = "config.txt";
+    String CONFIGURATION_FILE = "/projects/config.txt";
 
     /**literal for Assignment. */
     String ASSIGNMENT_LITERAL = "assignment";

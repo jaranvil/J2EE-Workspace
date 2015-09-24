@@ -1,0 +1,9 @@
+W029654:Jack Edward:Jee:5:4:5:3:5:3:4
+W029655:Nick Foster:Jee:3:1:5:0:5:3:5
+W029656:Zack Edward:Jee:4:4:0:3:5:3:4
+W029657:Jenny Cham:Jee:1:4:5:3:2:3:3
+W029658:Jackie Sam:Jee:3:4:5:3:5:3:1
+W029659:Edward Graham:Jee:2:4:1:3:5:3:3
+W029660:Charles Nislon:Jee:3:4:3:3:3:3:3
+W029661:Jimmy Harold:Jee:2:2:5:3:3:3:3
+W029662:John Sam:Jee:4:4:3:4:4:3:5

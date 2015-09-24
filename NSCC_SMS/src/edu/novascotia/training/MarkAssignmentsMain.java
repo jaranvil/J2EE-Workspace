@@ -18,12 +18,12 @@ import edu.novascotia.training.utitlty.FileHandler;
 public final class MarkAssignmentsMain
 {
     /** list of students course assignments mark read; each per line. */
-  private static List<String>  list;
+	protected static List<String>  list;
     /** list of students. */
-    private static List<Student> students = new ArrayList<Student>();
+    protected static List<Student> students = new ArrayList<Student>();
 
     /** prevent instantiation. */
-    private MarkAssignmentsMain()
+    public MarkAssignmentsMain()
     {
     }
 
@@ -55,7 +55,7 @@ public final class MarkAssignmentsMain
 
     }
     /** display help menu. */
-    private void displayHelp()
+    void displayHelp()
     {
         System.out.println("Please, supply the program with the suitable argument:");
         System.out.println("Enter \"1\" to display students info.");
@@ -88,7 +88,7 @@ public final class MarkAssignmentsMain
     /** @param lines data read from file.
      * @return list of students loaded from the file.
      * @throws IOException when IO error occurs. */
-    private List<Student> loadCourseMarks(final List<String> lines) throws IOException
+    public List<Student> loadCourseMarks(final List<String> lines) throws IOException
     {
        for (String line : lines)
         {
@@ -104,7 +104,7 @@ public final class MarkAssignmentsMain
 
     /** print list of students. */
 
-    private void printStudentsList()
+    public void printStudentsList()
     {
         for (Student student : students)
         {
@@ -114,7 +114,7 @@ public final class MarkAssignmentsMain
 
     }
 
-    private void printStudentsGrades()
+    public void printStudentsGrades()
     {
         for (Student student : students)
         {
