@@ -28,7 +28,11 @@
 
   <role rolename="tomcat"/>
   <role rolename="manager-gui"/>
+<<<<<<< HEAD
   <role rolename="role1"/>  
+=======
+  <role rolename="role1"/>
+>>>>>>> c03969a7ff19fe649089a8ebc15510e16876c7f6
   <user password="tomcat" roles="tomcat ,manager-gui" username="tomcat"/>
   <user password="tomcat" roles="tomcat,role1" username="both"/>
   <user password="tomcat" roles="role1" username="role1"/>

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=NSCCUSER
 useridperkey=WIN7PROBASE-PC.Local\=NSCCUSER;
+=======
+activeuserprofiles=INWSD30918;Team
+eclipse.preferences.version=1
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=w0269431
+useridperkey=INWSD30918.Local\=w0269431;
+>>>>>>> c03969a7ff19fe649089a8ebc15510e16876c7f6

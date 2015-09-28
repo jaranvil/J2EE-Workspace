@@ -4,6 +4,7 @@
 	<servlet>
 		<description>
 		</description>
+<<<<<<< HEAD
 		<display-name>ListStduents</display-name>
 		<servlet-name>ListStduents</servlet-name>
 		<servlet-class>edu.novascotia.training.ListStduents</servlet-class>
@@ -37,6 +38,15 @@
 	<servlet-mapping>
 		<servlet-name>ListStudent</servlet-name>
 		<url-pattern>/list</url-pattern>
+=======
+		<display-name>test</display-name>
+		<servlet-name>test</servlet-name>
+		<servlet-class>test</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/test</url-pattern>
+>>>>>>> c03969a7ff19fe649089a8ebc15510e16876c7f6
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

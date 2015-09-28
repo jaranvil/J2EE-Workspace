@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 org.eclipse.rse.preferences.order.connections=WIN7PROBASE-PC.Local
+=======
+org.eclipse.rse.preferences.order.connections=INWSD30918.Local
+>>>>>>> c03969a7ff19fe649089a8ebc15510e16876c7f6

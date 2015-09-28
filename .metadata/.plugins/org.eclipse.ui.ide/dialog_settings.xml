@@ -5,7 +5,11 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+<<<<<<< HEAD
 			<item value="C:\Users\NSCCUSER\Documents\J2EE-Workspace\NSCC_SMS"/>
+=======
+			<item value="H:\J2EE-Workspace\NSCC_SMS"/>
+>>>>>>> c03969a7ff19fe649089a8ebc15510e16876c7f6
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
