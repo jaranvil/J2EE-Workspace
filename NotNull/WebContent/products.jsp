@@ -65,34 +65,44 @@
             
      
               <a href="#">
-              <div class="panel callout radius">
+              <div class="panel">
  
-              <h5>Your Cart</h5>
+               
               
               <c:choose> 
+             
 	            <c:when test="${ !(cart.size() < 1) }"> 
+	                   <table>
+                       <tr>
+                           <td>
+                               <h5>Your Cart</h5>
+                           </td>
+                           <td>
+                              <form method="POST" action="/NotNull/tocart">
+                                  <input type="hidden" value="${cart.get(x) }" name="name">
+                                  <input type="hidden" value="delete" name="action">
+                                  <input type="submit" value="X">
+                              </form>
+                          </td>
+                      </tr>
 	                <c:forEach var="x" begin="0" end="${cart.size() - 1 }">
-		                
-		                <table>
 			                <tr>
 				                <td>
 				                    ${cart.get(x) }
 				                </td>
 				                <td>
-				                    <form method="POST" action="/NotNull/tocart">
-				                        <input type="hidden" value="${cart.get(x) }" name="name">
-				                        <input type="hidden" value="delete" name="action">
-				                        <input type="submit" value="X">
-				                    </form>
-				                </td>
-			                </tr>
-			                <tr>
-                                <td>
                                     $${price.get(x) }
                                 </td>
+				                
+                                
                             </tr>
-		                </table>	      
+		                      
 		             </c:forEach>
+		             </table> 
+		             <form method="POST" action="/NotNull/tocart">
+                         <input type="hidden" value="checkout" name="action">
+                         <input type="submit" value="Checkout" class="button">
+                     </form>
 	            </c:when>
 	        </c:choose>
               
@@ -110,11 +120,12 @@
      
                   <div class="panel">
                     <h5>Visual Assembly ++</h5>
-                    <h6 class="subheader">$000.00</h6>
+                    <h6 class="subheader">$111.00</h6>
                     
                     <form method="POST" action="/NotNull/tocart">
-                        <input type="hidden" value="Visual Assembly 4.2" name="product">
+                        <input type="hidden" value="Visual Assembly ++" name="product">
                         <input type="hidden" value="111" name="price">
+                        <input type="hidden" value="add" name="action">
                         <input type="submit" class="button" value="Add To Cart">
                     </form>
                     
@@ -127,7 +138,14 @@
                   <div class="panel">
                     <h5>ServletStorm 4.2</h5>
                     The best IDE
-                    <h6 class="subheader">$000.00</h6>
+                    <h6 class="subheader">$85.00</h6>
+                    
+                    <form method="POST" action="/NotNull/tocart">
+                        <input type="hidden" value="ServletStorm 4.2" name="product">
+                        <input type="hidden" value="85" name="price">
+                        <input type="hidden" value="add" name="action">
+                        <input type="submit" class="button" value="Add To Cart">
+                    </form>
                     
                   </div>
                 </div>
@@ -137,39 +155,73 @@
      
                   <div class="panel">
                     <h5>Filters for Dummies</h5>
-                    <h6 class="subheader">$000.00</h6>
+                    <h6 class="subheader">$20.00</h6>
+                    
+                    <form method="POST" action="/NotNull/tocart">
+                        <input type="hidden" value="Filters for Dummies" name="product">
+                        <input type="hidden" value="20" name="price">
+                        <input type="hidden" value="add" name="action">
+                        <input type="submit" class="button" value="Add To Cart">
+                    </form>
                   </div>
                 </div>
      
-                <div class="large-4 small-6 columns">
-                  <img src="http://placehold.it/500x500&text=Thumbnail">
-     
-                  <div class="panel">
-                    <h5>Item Name</h5>
-                    <h6 class="subheader">$000.00</h6>
-                  </div>
-                </div>
-     
-                <div class="large-4 small-6 columns">
-                  <img src="http://placehold.it/500x500&text=Thumbnail">
-     
-                  <div class="panel">
-                    <h5>Item Name</h5>
-                    <h6 class="subheader">$000.00</h6>
-                  </div>
-                </div>
-     
-                <div class="large-4 small-6 columns">
-                  <img src="http://placehold.it/500x500&text=Thumbnail">
-     
-                  <div class="panel">
-                    <h5>Item Name</h5>
-                    <h6 class="subheader">$000.00</h6>
-                  </div>
-                </div>
               </div>
      
-         
+          <div class="row">
+     
+                <div class="large-4 small-6 columns">
+                  <img src="img/software.png">
+     
+                  <div class="panel">
+                    <h5>Software Product</h5>
+                    <h6 class="subheader">$999.00</h6>
+                    
+                    <form method="POST" action="/NotNull/tocart">
+                        <input type="hidden" value="Software Product" name="product">
+                        <input type="hidden" value="999" name="price">
+                        <input type="hidden" value="add" name="action">
+                        <input type="submit" class="button" value="Add To Cart">
+                    </form>
+                    
+                  </div>
+                </div>
+                
+                <div class="large-4 small-6 columns">
+                  <img src="img/j2ee.png">
+     
+                  <div class="panel">
+                    <h5>J2EE 7</h5>
+                    <h6 class="subheader">$20.00</h6>
+                    
+                    <form method="POST" action="/NotNull/tocart">
+                        <input type="hidden" value="J2EE 7" name="product">
+                        <input type="hidden" value="20" name="price">
+                        <input type="hidden" value="add" name="action">
+                        <input type="submit" class="button" value="Add To Cart">
+                    </form>
+                    
+                  </div>
+                </div>
+                
+                 <div class="large-4 small-6 columns">
+                  <img src="img/java.png">
+     
+                  <div class="panel">
+                    <h5>Java Muffins</h5>
+                    <h6 class="subheader">$5.00</h6>
+                    
+                    <form method="POST" action="/NotNull/tocart">
+                        <input type="hidden" value="Muffins" name="product">
+                        <input type="hidden" value="5" name="price">
+                        <input type="hidden" value="add" name="action">
+                        <input type="submit" class="button" value="Add To Cart">
+                    </form>
+                    
+                  </div>
+                </div>
+                
+            </div>
      
      
          

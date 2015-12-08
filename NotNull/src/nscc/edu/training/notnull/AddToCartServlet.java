@@ -45,16 +45,24 @@ public class AddToCartServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String product = request.getParameter("product");
-		String price = request.getParameter("price");
-		String user = "1";
-		writeToFile(user+":"+product+":"+price);
+	    
+	    if (request.getParameter("action").equals("delete")) {
+	        deleteItem(request.getParameter("name"));
+	        
+	    } else if (request.getParameter("action").equals("add")) {
+	        String product = request.getParameter("product");
+	        String price = request.getParameter("price");
+	        String user = "1";
+	        writeToFile(user+":"+product+":"+price);
+	        
+	        //request.getRequestDispatcher("products.jsp").forward(request, response);
+	        
+	        
+	    }
+	    
 		
-		//request.getRequestDispatcher("products.jsp").forward(request, response);
-		
-		HttpServletResponse httpResponse = (HttpServletResponse) response;
-		httpResponse.sendRedirect("products.jsp");
-		
+	    HttpServletResponse httpResponse = (HttpServletResponse) response;
+        httpResponse.sendRedirect("products.jsp");
 		return;
 		
 	}
@@ -87,7 +95,7 @@ public class AddToCartServlet extends HttpServlet {
             {
                 while ((temp = bfr.readLine()) != null)
                 {                
-                    String[] data = temp.split(" ");
+                    String[] data = temp.split(":");
                     System.out.println(data[0] + " " + data[1] + " " + data[2]);
                 }
             }
@@ -101,6 +109,75 @@ public class AddToCartServlet extends HttpServlet {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+	}
+	
+	public void deleteItem(String name)
+	{
+	    File file = new File("C:/servers/apache-tomcat-8.0.26/wtpwebapps/NotNull/WEB-INF/cart.txt");
+	    PrintWriter writer;
+        try
+        {
+            writer = new PrintWriter(file);
+            writer.print("");
+            writer.close();
+        }
+        catch (FileNotFoundException e1)
+        {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+	    
+	    
+	    
+//	    String temp = "";
+//	    String path = "C:/servers/apache-tomcat-8.0.26/wtpwebapps/NotNull/WEB-INF/cart.txt";
+//        try (BufferedReader bfr = new BufferedReader(new FileReader(path)))
+//           {
+//            int count = 0;
+//               while ((temp = bfr.readLine()) != null)
+//               {                
+//                   String[] data = temp.split(":");
+//                   if (data[1].equals(name))
+//                       removeNthLine(path, name);
+//                   count++;
+//         
+//                       
+//               }
+//           }
+//           catch (FileNotFoundException e)
+//           {
+//               // TODO Auto-generated catch block
+//               e.printStackTrace();
+//           }
+//           catch (IOException e)
+//           {
+//               // TODO Auto-generated catch block
+//               e.printStackTrace();
+//           }
+	}
+	
+	public static void removeNthLine(String f, String name) throws IOException {
+
+	    String path = "C:/servers/apache-tomcat-8.0.26/wtpwebapps/NotNull/WEB-INF/temp.txt";
+	    File inputFile = new File(f);
+	    File tempFile = new File(path);
+
+	    BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+	    BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+	    String lineToRemove = name;
+	    String currentLine;
+
+	    while((currentLine = reader.readLine()) != null) {
+	        // trim newline when comparing with lineToRemove
+	        String trimmedLine = currentLine.trim();
+	        if(trimmedLine.equals(lineToRemove)) continue;
+	        writer.write(currentLine + System.getProperty("line.separator"));
+	    }
+	    writer.close(); 
+	    reader.close(); 
+
+
 	}
 
 }
