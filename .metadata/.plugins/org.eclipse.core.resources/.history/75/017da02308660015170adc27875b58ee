@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="NSCC_Grocery">
+        <property name="context-root" value="NSCC_Grocery"/>
+        <property name="java-output-path" value="/NSCC_Grocery/build/classes"/>
+    </wb-module>
+</project-modules>

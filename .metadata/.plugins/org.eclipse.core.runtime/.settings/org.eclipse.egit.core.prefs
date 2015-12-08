@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-GitRepositoriesView.GitDirectories=C\:\\Users\\NSCCUSER\\Documents\\J2EE-Workspace\\.git;
-=======
-GitRepositoriesView.GitDirectories=H\:\\J2EE-Workspace\\.git;
->>>>>>> c03969a7ff19fe649089a8ebc15510e16876c7f6
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=c03969a7ff19fe649089a8ebc15510e16876c7f6
+GitRepositoriesView.GitDirectories=H\:\\J2EE-Workspace\\.git;C\:\\Users\\NSCCUSER\\Documents\\J2EE-Workspace\\.git;
 eclipse.preferences.version=1
